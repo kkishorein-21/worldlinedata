@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index1.css">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1>Employee Data</h1>
+    <% if(employeedetails.length > 0){ %>
+        <% for(var i=0;i<employeedetails.length;i++){ %>
+            <h3>Name:- <%- employeedetails[i].Name %></h3>
+            <h3>Email:- <%- employeedetails[i].Email  %></h3>
+            <h3>Mobile:- <%- employeedetails[i].Mobile  %></h3>
+            <h3>Gender:- <%- employeedetails[i].Gender  %></h3>
+            <h3>Qualification:- <%- employeedetails[i].Qulaification  %></h3>
+            <h3>Date of joining:- <%- employeedetails[i].Dateofjoining  %></h3>
+            <h3>Date of leaving:- <%- employeedetails[i].Dateofleaving  %></h3>
+            <h3>Years of experience:- <%- employeedetails[i].yearr - employeedetails[i].yearj %></h3>
+            <h3>Country:- <%- employeedetails[i].Country  %></h3>
+            <hr>
+            <% } %>
+            <% }else{ %>
+                <h3>EmployeeDetails Not Found</h3>
+                <% } %>
+                <h3>Powered By WorldLine</h3>
+
+</body>
+</html>
