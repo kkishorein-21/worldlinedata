@@ -22,7 +22,7 @@ app.post('/',function(req,res){
     var sql = "INSERT INTO employee(Name,Email,Mobile,Gender,Qualification,Dateofjoining,Dateofleaving,Country) VALUES(?,?,?,?,?,?,?,?);"
     pool.query(sql,[name,email,mobile,gender,qualification,datej,dater,country],function(err,result){
         if(err) throw err;
-         res.redirect(__dirname+'./employeedetails');
+         res.redirect('/employeedetails');
     });
 });
 
@@ -38,4 +38,4 @@ app.get('/employeedetails',function(req,res){
         })
     })
 })
-app.listen(3000);
+app.listen(4000);
